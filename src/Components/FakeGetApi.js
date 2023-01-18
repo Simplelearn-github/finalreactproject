@@ -1,7 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { NavLink } from 'react-router-dom'
-import { Card, CardContent, Grid } from 'semantic-ui-react'
+
 
 function FakeGetApi() {
   const[data,setData]=useState([])
@@ -21,7 +20,7 @@ function FakeGetApi() {
             data.map((stu)=>(
 
                 <div className='col-md-4'> 
-                <img src={stu.thumbnailUrl} className='card-img-top'/>
+                <img src={stu.thumbnailUrl} className='card-img-top' alt=''/>
                 </div>
             ))
         }</div>
