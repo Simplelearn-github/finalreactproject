@@ -1,0 +1,70 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "Name": "Naveen",
+      "Dist": "Warangal",
+      "Branch": "MECH"
+    },
+    {
+      "id": 2,
+      "Name": "Muthireddy",
+      "Dist": "Bhpl",
+      "Branch": "MECH"
+    },
+    {
+      "id": 3,
+      "Name": "Nirosha",
+      "Dist": "Bhpl",
+      "Branch": "MME"
+    },
+    {
+      "id": 4,
+      "Name": "Basheer",
+      "Dist": "HNK",
+      "Branch": "MECH"
+    },
+    {
+      "id": 5,
+      "Name": "Prashanth",
+      "Dist": "Bhpl",
+      "Branch": "CSE"
+    },
+    {
+      "id": 6,
+      "Name": "Naveen",
+      "Dist": "Warangal",
+      "Branch": "MECH"
+    },
+    {
+      "id": 7,
+      "Name": "Naveen",
+      "Dist": "Warangal",
+      "Branch": "MECH"
+    },
+    {
+      "id": 8,
+      "Name": "Naveen",
+      "Dist": "Warangal",
+      "Branch": "MECH"
+    },
+    {
+      "id": 9,
+      "Name": "Naveen",
+      "Dist": "Warangal",
+      "Branch": "MECH"
+    },
+    {
+      "id": 10,
+      "Name": "Naveen",
+      "Dist": "Warangal",
+      "Branch": "MECH"
+    },
+    {
+      "id": 11,
+      "Name": "Naveen",
+      "Dist": "Warangal",
+      "Branch": "MECH"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+.top{
+    height: 140px;
+    border-bottom: 1px Solid rgb(92, 82, 82);
+   
+}
+.cols{
+    text-align: center;
+    border-left: 1px Solid rgb(126, 111, 111);
+    padding-top: 4%;
+}
