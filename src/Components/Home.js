@@ -1,5 +1,5 @@
 import { Carousel } from 'react-bootstrap'
-import React, { Fragment } from 'react'
+import React  from 'react'
 import Video from './Video'
 import GetAllStudents from './GetAllStudents'
 import FakeGetApi from './FakeGetApi'
