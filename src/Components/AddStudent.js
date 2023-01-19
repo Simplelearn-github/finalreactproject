@@ -4,12 +4,12 @@ import '../App.css'
 
 function AddStudent() {
   const[id,setId]=useState('')
-  const[Name,setName]=useState('')
-  const[Dist,setDist]=useState('')
-  const[Branch,setBranch]=useState('')
+  const[title,setTitle]=useState('')
+  const[body,setBody]=useState('')
+ 
   const submitHandler=(e)=>{
     e.preventDefault()
-    axios.post('http://localhost:3000/students/',{id,Name,Dist,Branch})
+    axios.post('https://jsonplaceholder.typicode.com/posts/',{id,title,body})
     .then(res=>{
       alert('data posted Successfully',res)
     })
@@ -28,16 +28,13 @@ function AddStudent() {
         </tr><br/>
         <tr>
           <th><label>Name:</label></th>
-          <td><input type="text" name='id' value={Name} onChange={(e)=>setName(e.target.value)}/></td>
+          <td><input type="text" name='id' value={title} onChange={(e)=>setTitle(e.target.value)}/></td>
         </tr><br/>
         <tr>
           <th><label>DIST:</label></th>
-          <td><input type="text" name='id' value={Dist} onChange={(e)=>setDist(e.target.value)}/></td>
+          <td><input type="text" name='id' value={body} onChange={(e)=>setBody(e.target.value)}/></td>
         </tr><br/>
-        <tr>
-          <th><label>Branch:</label></th>
-          <td><input type="text" name='id' value={Branch} onChange={(e)=>setBranch(e.target.value)}/></td>
-        </tr><br/>
+        
         <tr>
           <th></th>
           <td style={{float:"right"}}><input type="submit" style={{backgroundColor:"green",color:"white"}}/></td>

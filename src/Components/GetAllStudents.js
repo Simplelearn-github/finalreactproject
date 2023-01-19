@@ -8,7 +8,7 @@ import $ from 'jquery'
 function GetAllStudents() {
   const[data,setData]=useState([])
   useEffect(()=>{
-    axios.get('http://localhost:3000/students')
+    axios.get('https://jsonplaceholder.typicode.com/posts')
     .then(res=>{
       setData(res.data)
     })
@@ -25,9 +25,9 @@ function GetAllStudents() {
         <thead>
           <tr>
             <th>ID</th>
-            <th>Name</th>
-            <th>Dist</th>
-            <th>Branch</th>
+            <th>Title</th>
+         
+            <th>Body</th>
            
           </tr>
         </thead>
@@ -37,9 +37,9 @@ data.map((stu)=>{
   return(
     <tr key={stu.id}>
       <td>{stu.id}</td>
-      <td>{stu.Name}</td>
-      <td>{stu.Dist}</td>
-      <td>{stu.Branch}</td>
+      <td>{stu.title}</td>
+      <td>{stu.body}</td>
+    
      
     </tr>
   )
