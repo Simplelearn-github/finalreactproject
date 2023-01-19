@@ -15,13 +15,13 @@ const LogHome = () => {
        <img height="150px" width="50%" src='https://rguktn.ac.in/assets_new/images/logo.png' alt='text/not loaded'/>
        <ul>
         <li>
-            <NavLink to='AddStudent' ><Icon  name='add user' style={{color:'blue'}} /><b style={{color:"black"}}>AddStudents</b></NavLink>
+            <NavLink to='AddStudent' ><Icon  name='add user' style={{color:'blue'}} /><b style={{color:"black"}}>AddPosts</b></NavLink>
         </li>
         <li>
-            <NavLink to='DeleteStudent' > <Icon name="trash"  style={{color:'red'}}/><b style={{color:"black"}}>DeleteStudents</b></NavLink>
+            <NavLink to='DeleteStudent' > <Icon name="trash"  style={{color:'red'}}/><b style={{color:"black"}}>DeletePosts</b></NavLink>
         </li>
         <li>
-            <NavLink to='EditStudent' ><Icon name='edit' style={{color:'green'}}/><b style={{color:"black"}}>EditStudents</b></NavLink>
+            <NavLink to='EditStudent' ><Icon name='edit' style={{color:'green'}}/><b style={{color:"black"}}>EditPosts</b></NavLink>
         </li>
        </ul>
       

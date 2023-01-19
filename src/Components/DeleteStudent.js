@@ -10,7 +10,7 @@ import $ from 'jquery'
 function DeleteStudent() {
   const[data,setData]=useState([])
   useEffect(()=>{
-    axios.get(' http://localhost:3000/students')
+    axios.get(' https://jsonplaceholder.typicode.com/posts')
     .then(res=>{
       setData(res.data)
       setInterval(()=>{
@@ -22,7 +22,7 @@ function DeleteStudent() {
    
   })
   function deleteHandler(stuid){
-    axios.delete(`http://localhost:3000/students/${stuid}`)
+    axios.delete(`https://jsonplaceholder.typicode.com/posts/${stuid}`)
     .then(res=>{
       alert('deleted data successfully',res)
     })
@@ -36,9 +36,9 @@ function DeleteStudent() {
         <thead>
           <tr>
             <th>ID</th>
-            <th>Name</th>
-            <th>DIST</th>
-            <th>BRANCH</th>
+            <th>TITLE</th>
+            <th>BODY</th>
+          
             <th></th>
           </tr>
         </thead>
@@ -48,9 +48,9 @@ data.map((stu)=>{
   return(
     <tr key={stu.id}>
       <td>{stu.id}</td>
-      <td>{stu.Name}</td> 
-      <td>{stu.Dist}</td>
-      <td>{stu.Branch}</td>
+      <td>{stu.title}</td> 
+      <td>{stu.body}</td>
+    
       <td><button onClick={()=>deleteHandler(stu.id)} style={{color:"red",border:"0px solid white"}}><Icon  name='trash'/></button></td>
     </tr>
   )

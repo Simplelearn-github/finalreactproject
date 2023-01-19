@@ -19,8 +19,10 @@ function FakeGetApi() {
         {
             data.map((stu)=>(
 
-                <div className='col-md-4'> 
-                <img src={stu.thumbnailUrl} className='card-img-top' alt=''/>
+                <div className='col-md-3'> 
+               
+                <img src={stu.thumbnailUrl} className='card-img-top' alt='' />
+               
                 </div>
             ))
         }</div>

@@ -9,11 +9,10 @@ import $ from 'jquery'
 function EditStudent() {
   const[data,setData]=useState([])
   const[id,setId]=useState('')
-  const[Name,setName]=useState('')
-  const[Dist,setDist]=useState('')
-  const[Branch,setBranch]=useState('')
+  const[title,setTitle]=useState('')
+  const[body,setBody]=useState('')
   useEffect(()=>{
-    axios.get(' http://localhost:3000/students')
+    axios.get(' https://jsonplaceholder.typicode.com/posts')
     .then(res=>{
       setData(res.data)
       setInterval(()=>{
@@ -26,22 +25,22 @@ function EditStudent() {
   })
     
   function editHandler(stuid){
-    axios.get('http://localhost:3000/students/'+stuid)
+    axios.get('https://jsonplaceholder.typicode.com/posts/'+stuid)
     .then(res=>{
       setId(res.data.id)
-      setName(res.data.Name)
-      setDist(res.data.Dist)
-      setBranch(res.data.Branch)
+      setTitle(res.data.title)
+      setBody(res.data.body)
+     
     })
   }
   const submitHandler=(e)=>{
     e.preventDefault()
-    axios.put('http://localhost:3000/students/'+id,{id,Name,Dist,Branch})
+    axios.put('https://jsonplaceholder.typicode.com/posts/'+id,{id,title,body})
     .then(res=>{
-      alert('data posted Successfully',res)
+      alert('post edited Successfully',res)
     })
     .catch(res=>{
-      alert('Unable to post Data',res)
+      alert('Unable to edit Data',res)
     })
 
   }
@@ -54,17 +53,14 @@ function EditStudent() {
        <td><input type="number"name='id' value={id} onChange={(e)=>setId(e.target.value)} /></td>
      </tr><br/>
      <tr>
-       <th><label>Name:</label></th>
-       <td><input type="text" name='id' value={Name} onChange={(e)=>setName(e.target.value)}/></td>
+       <th><label>Titl:</label></th>
+       <td><input type="text" name='title' value={title} onChange={(e)=>setTitle(e.target.value)}/></td>
      </tr><br/>
      <tr>
-       <th><label>DIST:</label></th>
-       <td><input type="text" name='id' value={Dist} onChange={(e)=>setDist(e.target.value)}/></td>
+       <th><label>Body:</label></th>
+       <td><input type="text" name='body' value={body} onChange={(e)=>setBody(e.target.value)}/></td>
      </tr><br/>
-     <tr>
-       <th><label>Branch:</label></th>
-       <td><input type="text" name='id' value={Branch} onChange={(e)=>setBranch(e.target.value)}/></td>
-     </tr><br/>
+    
      <tr>
        <th></th>
        <td style={{float:"right"}}><input type="submit" style={{backgroundColor:"green",color:"white"}}/></td>
@@ -76,9 +72,9 @@ function EditStudent() {
         <thead>
           <tr>
             <th>ID</th>
-            <th>Name</th>
-            <th>DIST</th>
-            <th>BRANCH</th>
+            <th>Title</th>
+            <th>Body</th>
+         
           </tr>
         </thead>
         <tbody>
@@ -87,9 +83,9 @@ data.map((stu)=>{
   return(
     <tr key={stu.id}>
       <td>{stu.id}</td>
-      <td>{stu.Name}</td>
-      <td>{stu.Dist}</td>
-      <td>{stu.Branch}</td>
+      <td>{stu.title}</td>
+      <td>{stu.body}</td>
+    
       <td><button onClick={()=>editHandler(stu.id)} style={{color:"red",border:"0px solid white"}}><Icon  name='edit'/></button></td>
 
     </tr>
