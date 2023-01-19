@@ -65,6 +65,12 @@
       "Name": "Naveen",
       "Dist": "Warangal",
       "Branch": "MECH"
+    },
+    {
+      "id": "12",
+      "Name": "Lokesh",
+      "Dist": "hyd",
+      "Branch": "civil"
     }
   ]
 }

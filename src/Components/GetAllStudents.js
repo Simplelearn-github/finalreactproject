@@ -8,25 +8,26 @@ import $ from 'jquery'
 function GetAllStudents() {
   const[data,setData]=useState([])
   useEffect(()=>{
-    axios.get('https://jsonplaceholder.typicode.com/posts')
+    axios.get('http://localhost:3000/students')
     .then(res=>{
       setData(res.data)
     })
     .catch(res=>res)
     setInterval(()=>{
       $(document).ready( function () {
-        $('#tables').DataTable();
+        $('#tabless').DataTable();
     } );
     },1000)
   })
   return (
     <div>
-      <table id="tables">
+      <table id="tabless">
         <thead>
           <tr>
             <th>ID</th>
-            <th>Title</th>
-            <th>Body</th>
+            <th>Name</th>
+            <th>Dist</th>
+            <th>Branch</th>
            
           </tr>
         </thead>
@@ -36,8 +37,9 @@ data.map((stu)=>{
   return(
     <tr key={stu.id}>
       <td>{stu.id}</td>
-      <td>{stu.title}</td>
-      <td>{stu.body}</td>
+      <td>{stu.Name}</td>
+      <td>{stu.Dist}</td>
+      <td>{stu.Branch}</td>
      
     </tr>
   )
