@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 
 
+
 function FakeGetApi() {
   const[data,setData]=useState([])
   useEffect(()=>{
@@ -18,12 +19,15 @@ function FakeGetApi() {
 
         {
             data.map((stu)=>(
+             
 
-                <div className='col-md-3'> 
+
+
+                 <div className='col-md-3' style={{padding:'5px'}}> 
                
                 <img src={stu.thumbnailUrl} className='card-img-top' alt='' />
                
-                </div>
+               </div>
             ))
         }</div>
     </div>
